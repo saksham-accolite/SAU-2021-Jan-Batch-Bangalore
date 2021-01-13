@@ -50,7 +50,7 @@ public class BlogController {
 
      @GetMapping("/blogs/search/{tag}")
      public List<Blogs> getBlogByTag(@PathVariable String tag) {
-        String tags[] = tag.split(", ");
+        String tags[] = tag.split("+");
         List<String> searchTags = Arrays.asList(tags);
 
         return blogRepository.findByTags(searchTags);

@@ -1,0 +1,5 @@
+dropping primary index -> 
+drop index couchbasedemo.idx_primary_cbdemo;
+
+querying for secondary index assuming "_class" as secondary index
+CREATE INDEX `idx_secondary` ON `couchbasedemo`(`_class`)

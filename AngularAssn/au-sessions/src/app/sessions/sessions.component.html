@@ -1,0 +1,16 @@
+<h2>All Sessions</h2>
+  <ul class="sessions">
+    <li *ngFor="let session of sessions"
+      [class.selected]="session === selectedSession"
+      (click)="onSelect(session)">
+      <span class="badge">{{session.name}}</span><br>
+    </li>
+  </ul>
+  
+  <button (click)="selectedSession=addSession()">Add Session</button>
+
+  <div *ngIf="selectedSession">
+  <button (click)="deleteSession(selectedSession)">delete Selected Session</button>
+   </div>
+
+  <app-session-detail [selectedSession]="selectedSession"></app-session-detail>

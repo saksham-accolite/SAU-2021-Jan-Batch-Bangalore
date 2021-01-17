@@ -1,0 +1,21 @@
+<div *ngIf="selectedSession">
+  
+    <h2>{{selectedSession.name | uppercase}} Session Details</h2>
+    <div><span>name: </span>{{selectedSession.name}}</div><br>
+    <div><span>trainer: </span>{{selectedSession.trainer}}</div><br>
+    <div><span>date: </span>{{selectedSession.date}}</div><br>
+    <div>
+        <label>name:
+            <input [(ngModel)]="selectedSession.name" placeholder="name"/>
+          </label><br>
+        
+        <label>trainer:
+        <input [(ngModel)]="selectedSession.trainer" placeholder="trainer"/>
+        </label><br>
+        
+        <label>date:
+            <input [(ngModel)]="selectedSession.date" placeholder="date"/>
+          </label><br>
+    </div>
+  
+  </div>
